@@ -1,10 +1,12 @@
 import React from 'react'
-import Map from './component/Map'
+import FilterMap from './component/FilterMap'
+// import Map from './component/Map'
 
 export default function App() {
   return (
     <>
-      <Map/>
+      {/* <Map/> */}
+      <FilterMap/>
     </>
   )
 }
