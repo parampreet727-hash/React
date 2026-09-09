@@ -1,5 +1,6 @@
 import React from "react";
-import FunctionAsProps from "./component/FunctionAsProps";
+// import FrowardRef from "./component/FrowardRef";
+// import FunctionAsProps from "./component/FunctionAsProps";
 // import BootStrap from './component/BootStrap'
 // import UseEffectProps from './component/UseEffectProps'
 // import UseEffects from './component/UseEffects'
@@ -7,20 +8,22 @@ import FunctionAsProps from "./component/FunctionAsProps";
 // import Map from './component/Map'
 
 export default function App() {
-  const channelName = (name) => {
-    alert(name);
-  };
+  // const channelName = (name) => {
+  //   alert(name);
+  // };
   return (
     <>
       {/* <Map/> */}
       {/* <FilterMap/> */}
       {/* <UseEffects/> */}
       {/* <UseEffectProps/> */}
-      {/* <BootStrap/> */}
+      {/* <BootStrap/>
       <FunctionAsProps channelName={channelName} name="Parampreet"/>
       <FunctionAsProps channelName={channelName} name="Harpreet"/>
       <FunctionAsProps channelName={channelName} name="Amrit"/>
-      <FunctionAsProps channelName={channelName} name="Deepa"/>
+      <FunctionAsProps channelName={channelName} name="Deepa"/> */}
+
+      {/* <FrowardRef/> */}
     </>
   );
 }
