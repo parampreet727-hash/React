@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMemo from "./component/ReactMemo";
 // import FrowardRef from "./component/FrowardRef";
 // import FunctionAsProps from "./component/FunctionAsProps";
 // import BootStrap from './component/BootStrap'
@@ -24,6 +25,7 @@ export default function App() {
       <FunctionAsProps channelName={channelName} name="Deepa"/> */}
 
       {/* <FrowardRef/> */}
+      <ReactMemo/>
     </>
   );
 }
