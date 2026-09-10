@@ -1,5 +1,6 @@
 import React from "react";
-import UseMemo from "./component/UseMemo";
+import ObjectUseState from "./component/ObjectUseState";
+// import UseMemo from "./component/UseMemo";
 // import ReactMemo from "./component/ReactMemo";
 // import FrowardRef from "./component/FrowardRef";
 // import FunctionAsProps from "./component/FunctionAsProps";
@@ -27,7 +28,8 @@ export default function App() {
 
       {/* <FrowardRef/> */}
       {/* <ReactMemo/> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
+      <ObjectUseState/>
     </>
   );
 }
