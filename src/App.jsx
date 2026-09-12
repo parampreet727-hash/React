@@ -1,5 +1,6 @@
 import React from "react";
-import ObjectUseState from "./component/ObjectUseState";
+import ReactPropsChildern from "./component/ReactPropsChildern";
+// import ObjectUseState from "./component/ObjectUseState";
 // import UseMemo from "./component/UseMemo";
 // import ReactMemo from "./component/ReactMemo";
 // import FrowardRef from "./component/FrowardRef";
@@ -29,7 +30,8 @@ export default function App() {
       {/* <FrowardRef/> */}
       {/* <ReactMemo/> */}
       {/* <UseMemo/> */}
-      <ObjectUseState/>
+      {/* <ObjectUseState/> */}
+      <ReactPropsChildern/>
     </>
   );
 }
