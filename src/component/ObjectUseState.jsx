@@ -6,7 +6,7 @@ export default function ObjectUseState() {
     age: 24,
     address: {
       city: "Sunam",
-      State: "Punjab",
+      state: "Punjab",
     },
   });
 
@@ -16,6 +16,7 @@ export default function ObjectUseState() {
 
   const updateCity = () => {
     setUser({ ...user, city: (user.address.city = "Dharamgarh") });
+    setUser({ ...user, state: (user.address.state = "Punjab1") });
   };
 
   return (
@@ -24,7 +25,7 @@ export default function ObjectUseState() {
       <h3>Name : {user.name}</h3>
       <h3>Age : {user.age}</h3>
       <h3>City : {user.address.city}</h3>
-      <h3>State : {user.address.State}</h3>
+      <h3>State : {user.address.state}</h3>
 
       <button onClick={updateAge}>Update Age</button>
       <button onClick={updateCity}>Update City</button>
