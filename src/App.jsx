@@ -1,5 +1,6 @@
 import React from "react";
-import ReactPropsChildern from "./component/ReactPropsChildern";
+import DerviedState from "./component/DerviedState";
+// import ReactPropsChildern from "./component/ReactPropsChildern";
 // import ObjectUseState from "./component/ObjectUseState";
 // import UseMemo from "./component/UseMemo";
 // import ReactMemo from "./component/ReactMemo";
@@ -31,7 +32,8 @@ export default function App() {
       {/* <ReactMemo/> */}
       {/* <UseMemo/> */}
       {/* <ObjectUseState/> */}
-      <ReactPropsChildern/>
+      {/* <ReactPropsChildern/> */}
+      <DerviedState quantity={4} price={50} />
     </>
   );
 }
