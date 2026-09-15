@@ -1,5 +1,5 @@
 import React from "react";
-import DerviedState from "./component/DerviedState";
+// import DerviedState from "./component/DerviedState";
 // import ReactPropsChildern from "./component/ReactPropsChildern";
 // import ObjectUseState from "./component/ObjectUseState";
 // import UseMemo from "./component/UseMemo";
@@ -33,7 +33,7 @@ export default function App() {
       {/* <UseMemo/> */}
       {/* <ObjectUseState/> */}
       {/* <ReactPropsChildern/> */}
-      <DerviedState quantity={4} price={50} />
+      {/* <DerviedState quantity={4} price={50} /> */}
     </>
   );
 }
