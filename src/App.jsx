@@ -1,4 +1,6 @@
-import React from "react";
+// import React from "react";
+// import { UserProvider } from "./UserContext";
+// import Parent from "./contextComponent/Parent";
 // import DerviedState from "./component/DerviedState";
 // import ReactPropsChildern from "./component/ReactPropsChildern";
 // import ObjectUseState from "./component/ObjectUseState";
@@ -34,6 +36,13 @@ export default function App() {
       {/* <ObjectUseState/> */}
       {/* <ReactPropsChildern/> */}
       {/* <DerviedState quantity={4} price={50} /> */}
+{/* 
+      <div className="bg-dark p-5">
+        <h1 className="text-primary">App Component</h1>
+        <UserProvider>
+          <Parent />
+        </UserProvider>
+      </div> */}
     </>
   );
 }
