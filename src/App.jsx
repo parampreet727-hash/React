@@ -14,10 +14,36 @@
 // import FilterMap from './component/FilterMap'
 // import Map from './component/Map'
 
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Login from "./routes/pages/Login";
+import Dashboard from "./routes/pages/Dashboard";
+import Home from "./routes/pages/Home";
+import ProtectedRoute from "./routes/ProtectedRoute";
+
 export default function App() {
   // const channelName = (name) => {
   //   alert(name);
   // };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      ),
+    },
+  ]);
+
   return (
     <>
       {/* <Map/> */}
@@ -36,13 +62,15 @@ export default function App() {
       {/* <ObjectUseState/> */}
       {/* <ReactPropsChildern/> */}
       {/* <DerviedState quantity={4} price={50} /> */}
-{/* 
+      {/* 
       <div className="bg-dark p-5">
         <h1 className="text-primary">App Component</h1>
         <UserProvider>
           <Parent />
         </UserProvider>
       </div> */}
+
+      <RouterProvider router={router} />
     </>
   );
 }
