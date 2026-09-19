@@ -1,4 +1,4 @@
-// import React from "react";
+import React, { Suspense } from "react";
 // import { UserProvider } from "./UserContext";
 // import Parent from "./contextComponent/Parent";
 // import DerviedState from "./component/DerviedState";
@@ -15,10 +15,20 @@
 // import Map from './component/Map'
 
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Login from "./routes/pages/Login";
-import Dashboard from "./routes/pages/Dashboard";
-import Home from "./routes/pages/Home";
-import ProtectedRoute from "./routes/ProtectedRoute";
+// import Home from "./routes/lazyLoading/Home";
+// import LocationInfo from "./routes/lazyLoading/LocationInfo";
+// import Product from "./routes/lazyLoading/Product";
+
+const Home = React.lazy(() => import("./routes/lazyLoading/Home"));
+const LocationInfo = React.lazy(
+  () => import("./routes/lazyLoading/LocationInfo"),
+);
+const Product = React.lazy(() => import("./routes/lazyLoading/Product"));
+
+// import Login from "./routes/pages/Login";
+// import Dashboard from "./routes/pages/Dashboard";
+// import Home from "./routes/pages/Home";
+// import ProtectedRoute from "./routes/ProtectedRoute";
 
 export default function App() {
   // const channelName = (name) => {
@@ -31,16 +41,12 @@ export default function App() {
       element: <Home />,
     },
     {
-      path: "/login",
-      element: <Login />,
+      path: "/locationInfo",
+      element: <LocationInfo />,
     },
     {
-      path: "/dashboard",
-      element: (
-        <ProtectedRoute>
-          <Dashboard />
-        </ProtectedRoute>
-      ),
+      path: "/product",
+      element: <Product />,
     },
   ]);
 
@@ -69,8 +75,9 @@ export default function App() {
           <Parent />
         </UserProvider>
       </div> */}
-
-      <RouterProvider router={router} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <RouterProvider router={router} />
+      </Suspense>
     </>
   );
 }
