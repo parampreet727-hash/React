@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+// import React, { Suspense } from "react";
 // import { UserProvider } from "./UserContext";
 // import Parent from "./contextComponent/Parent";
 // import DerviedState from "./component/DerviedState";
@@ -14,16 +14,18 @@ import React, { Suspense } from "react";
 // import FilterMap from './component/FilterMap'
 // import Map from './component/Map'
 
-import { createBrowserRouter, RouterProvider } from "react-router";
+import Api from "./api/Api";
+
+// import { createBrowserRouter, RouterProvider } from "react-router";
 // import Home from "./routes/lazyLoading/Home";
 // import LocationInfo from "./routes/lazyLoading/LocationInfo";
 // import Product from "./routes/lazyLoading/Product";
 
-const Home = React.lazy(() => import("./routes/lazyLoading/Home"));
-const LocationInfo = React.lazy(
-  () => import("./routes/lazyLoading/LocationInfo"),
-);
-const Product = React.lazy(() => import("./routes/lazyLoading/Product"));
+// const Home = React.lazy(() => import("./routes/lazyLoading/Home"));
+// const LocationInfo = React.lazy(
+//   () => import("./routes/lazyLoading/LocationInfo"),
+// );
+// const Product = React.lazy(() => import("./routes/lazyLoading/Product"));
 
 // import Login from "./routes/pages/Login";
 // import Dashboard from "./routes/pages/Dashboard";
@@ -35,20 +37,20 @@ export default function App() {
   //   alert(name);
   // };
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/locationInfo",
-      element: <LocationInfo />,
-    },
-    {
-      path: "/product",
-      element: <Product />,
-    },
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
+  //   {
+  //     path: "/locationInfo",
+  //     element: <LocationInfo />,
+  //   },
+  //   {
+  //     path: "/product",
+  //     element: <Product />,
+  //   },
+  // ]);
 
   return (
     <>
@@ -75,9 +77,12 @@ export default function App() {
           <Parent />
         </UserProvider>
       </div> */}
+{/*       
       <Suspense fallback={<div>Loading...</div>}>
         <RouterProvider router={router} />
-      </Suspense>
+      </Suspense> */}
+
+      <Api/>
     </>
   );
 }
